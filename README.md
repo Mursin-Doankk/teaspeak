@@ -24,7 +24,7 @@ For your own security, do not run TeaSpeak or any other closed source program on
 Create another user for it.
 Create a new user called TeaSpeak, for example:
 
-````
+```
 adduser teaspeak
 ```
 Login to the new created user:
