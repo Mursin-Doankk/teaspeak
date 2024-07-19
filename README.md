@@ -25,58 +25,58 @@ Create another user for it.
 Create a new user called TeaSpeak, for example:
 
 ```
-# adduser teaspeak
+adduser teaspeak
 ```
-Login to the new created user:
+# Login to the new created user:
 ```
 su teaspeak
 ```
 # Download the latest version with the links below:
 
-64bit:
+# 64bit:
 
 ```
 wget -O TeaSpeak.tar.gz https://repo.teaspeak.de/server/linux/amd64/TeaSpeak-$(curl -k https://repo.teaspeak.de/server/linux/amd64/latest).tar.gz;
 ```
-32bit:
+# 32bit:
 
 ```
 wget -O TeaSpeak.tar.gz https://repo.teaspeak.de/server/linux/x86/TeaSpeak-$(curl -k https://repo.teaspeak.de/server/linux/x86/latest).tar.gz;
 ```
 
-Extract the ".tar.gz" file and delete it:
+# Extract the ".tar.gz" file and delete it:
 ```
 
 tar -xzf TeaSpeak.tar.gz
 rm TeaSpeak.tar.gz
 ```
 
-Start the server using a screen session so it keeps running in the background and doesn't shut itself down when you leave your SSH session:
+# Start the server using a screen session so it keeps running in the background and doesn't shut itself down when you leave your SSH session:
 
-screen -AmdS TeaSpeak-Server
-screen -x
+# screen -AmdS TeaSpeak-Server
+# screen -x
 
 ```
 ./teastart_minimal.sh
 ```
-Save your token and your query-login data into wordpad or wherever you can get it back anytime.
+# Save your token and your query-login data into wordpad or wherever you can get it back anytime.
 
-Close the session again with CTRL+C
+# Close the session again with CTRL+C
 
-Now edit the config file whith your needs (Ports: 10101 and 30033)
-After you've completely edited your config file, you can start the server using:
+# Now edit the config file whith your needs (Ports: 10101 and 30033)
+# After you've completely edited your config file, you can start the server using:
 
 ```
 ./teastart.sh start
 ```
-Stop it by using:
+# Stop it by using:
 ```
 ./teastart.sh stop
 ```
-To detach from the screen session, press:
+# To detach from the screen session, press:
 
-CTRL + A and CTRL +D
-#### if you have in the ouput Active: active (running) your server is ready!
+# CTRL + A and CTRL +D
+# if you have in the ouput Active: active (running) your server is ready!
 ```
 iptables -A INPUT -p udp --dport 9987 -j ACCEPT
 
@@ -90,4 +90,4 @@ iptables -A INPUT -p tcp --dport 10101 -j ACCEPT
 
 iptables -A INPUT -p tcp --sport 10101 -j ACCEPT
 ```
-Done, you got your server running on port 9987!
+# Done, you got your server running on port 9987!
