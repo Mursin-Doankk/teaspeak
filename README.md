@@ -1,19 +1,19 @@
 # install TeaspeakServer
-
+```
 apt-get update
-
+```
 apt-get upgrade
-
+```
 apt-get install curl
-
+```
 apt-get install ffmpeg (Just if you want Costum TeaSpeak musicbot)
-
+```
 apt-get install youtube-dl (Just if you want Costum TeaSpeak musicbot)
-
+```
 apt-get install screen
-
+```
 apt-get install libnice10 -y
-
+```
 For your own security, do not run TeaSpeak or any other closed source program on your root account,
 Create another user for it.
 Create a new user called TeaSpeak, for example:
