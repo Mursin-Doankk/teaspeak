@@ -25,13 +25,13 @@ Create another user for it.
 Create a new user called TeaSpeak, for example:
 
 ```
-adduser teaspeak
+# adduser teaspeak
 ```
 Login to the new created user:
 ```
 su teaspeak
 ```
-Download the latest version with the links below:
+# Download the latest version with the links below:
 
 64bit:
 
@@ -63,7 +63,7 @@ Save your token and your query-login data into wordpad or wherever you can get i
 
 Close the session again with CTRL+C
 
-Now edit the config file whith your needs (Ports: 10011 and 30033)
+Now edit the config file whith your needs (Ports: 10101 and 30033)
 After you've completely edited your config file, you can start the server using:
 
 ```
@@ -76,5 +76,18 @@ Stop it by using:
 To detach from the screen session, press:
 
 CTRL + A and CTRL +D
+#### if you have in the ouput Active: active (running) your server is ready!
+```
+iptables -A INPUT -p udp --dport 9987 -j ACCEPT
 
+iptables -A INPUT -p udp --sport 9987 -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 30033 -j ACCEPT
+
+iptables -A INPUT -p tcp --sport 30033 -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 10101 -j ACCEPT
+
+iptables -A INPUT -p tcp --sport 10101 -j ACCEPT
+```
 Done, you got your server running on port 9987!
