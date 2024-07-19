@@ -1,4 +1,4 @@
-# install TeaspeakServer
+# install Teaspeak Server
 ```
 apt-get update
 ```
