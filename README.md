@@ -29,7 +29,7 @@ adduser teaspeak
 ```
 # Login to the new created user:
 ```
-su teaspeak
+su - teaspeak
 ```
 # Download the latest version with the links below:
 
